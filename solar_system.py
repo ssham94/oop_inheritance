@@ -6,8 +6,8 @@ class System:
         self.bodies.append(celestial_body)
 
     def total_mass(self):
-        total = sum(body for body in self.celestial_body)
-        return toral
+        total = sum(body.mass for body in self.bodies)
+        return total
 
 class Body:
     def __init__(self, planet_name, planet_mass):
@@ -42,6 +42,10 @@ solar_system.add(earth)
 solar_system.add(sun)
 solar_system.add(earth_moon)
 
+
 # Printing each item in the solar system to see if they have been added correctly
 for body in solar_system.bodies:
     print(body.name)
+
+# Checking to see that total mass is working as intended
+print(solar_system.total_mass())
